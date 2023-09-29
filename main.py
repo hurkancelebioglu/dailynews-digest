@@ -17,7 +17,7 @@ body = ""
 for article in content["articles"][:20]:
     if article["title"] is not None:
         body = "Subject: Today's news" + "\n" + body + article["title"] \
-               + "\n" + article["description"] + "\n" + article["url"] + 2*"\n"
+               + "\n" + article["description"] + "\n" + article["url"] + 2 * "\n"
 
 body = body.encode("utf-8")
 send_email(message=body)
